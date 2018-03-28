@@ -32,7 +32,7 @@ def set_global(args):
     tarball_dir = ops.path_join(output_dir, TARBALL_DIR)
     cc_host_str = ops.getEnv("CROSS_COMPILE")
     cc_host = cc_host_str[:len(cc_host_str) - 1]
-    dst_include_dir = ops.path_join("include",args["pkg_name"])
+    dst_include_dir = ops.path_join(output_dir, ops.path_join("include",args["pkg_name"]))
     dst_lib_dir = ops.path_join(install_dir, "lib")
 
 def MAIN_ENV(args):
